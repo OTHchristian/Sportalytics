@@ -1,0 +1,312 @@
+body {
+  background: #f7fafb;
+  justify-content: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.help{
+    height:140px;
+}
+nav{
+    width: 100%;
+    height: 80px;
+    background-color: #e3f2fd;
+    transition: 1s;
+    z-index: 1;
+}
+.nav-link:hover {
+    color: black;
+}
+.nav-link::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: orange;
+  margin-top: 10px;
+}
+.styleTitle::after{
+  content: "";
+  width: 100px;
+  border-radius: 2px;
+  display: block;
+  height: 3px;
+  background: orange;
+  margin-top: 10px;
+}
+.topCenter{
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 130px);
+    justify-content: center;
+    align-items: center;
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.align{
+    display: flex;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #222;
+    color: orange;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ffe5cc;
+}
+.seeMore{
+    margin-top: 20px;
+    padding: 10px;
+    width: fit-content;
+    border: 2px double rgba(0,0,0,0.2);
+    border-radius: 10px;
+    transition: 1s;
+}
+.seeMore:hover{
+    background-color: #e3f2fd;
+    border: 2px double #e3f2fd;
+    box-shadow: 20px 0px 20px rgba(0,0,0,0.3);
+}
+.carousel-item{
+    height: 405px;
+    border-radius: 20px;
+    background-color: rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+.imgCarroussel{
+    height: 405px;
+}
+
+.masked-text {
+  font-weight: bold;
+  font-size: 50px;
+  background: url('../img/2.jpg') center/cover no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.offer{
+    width: 90%;
+    border:1px solid rgba(0,0,0,0.2);
+    border-radius: 20px;
+    padding: 30px;
+    margin-top: 30px;
+}
+.offerItem{
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: white;
+    margin-bottom: 25px;
+    border:1px solid rgba(0,0,0,0.2);
+    box-shadow: 20px 20px 0px rgba(0,0,0,0.2);
+    transition: 1s;
+}
+.offerItem:hover{
+    border:1px solid black;
+    box-shadow: 20px 20px 0px black;
+}
+.pronoSport{
+    width: 100%;
+    padding: 20px;
+}
+.pronoChamp{
+    width: 100%;
+    border-radius: 20px;
+    padding: 30px;
+    margin-top: 30px;
+}
+.pronoItem{
+    border:1px solid rgba(0,0,0,0.2);
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 15px;
+    transition: 1s;
+}
+.box {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 1s ease;
+}
+
+.box.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.pronoItem:hover{
+    border:1px solid orange;
+    scale: 1.1;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
+}
+.person{
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: white;
+    border:1px solid rgba(0,0,0,0.2);
+}
+.article{
+    width: 100%;
+    border: 1px solid rgba(0,0,0,0.2);
+    overflow: hidden;
+    border-radius: 20px;
+}
+.article:hover{
+    border: 1px solid orange;
+}
+.article h5:hover{
+    color: orange;
+}
+.pronoActu{
+    padding: 30px;
+}
+.imgArticle{
+    background-image: url("https://static.sportytrader.com/images/news/tennis/jack_draper.webp");
+    transform: scale(1.1);
+    background-size: cover;
+    height: 250px;
+    border-radius: 10px;
+    transition: 1s;
+}
+.imgArticle:hover{
+    transform: scale(0.5);
+}
+.smallDescrip{
+    margin-top: 10px;
+    padding: 10px;
+}
+.about-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.about-section .container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #ffa500;
+}
+
+.about-section .highlight {
+  color: #ff5500;
+}
+
+.about-section p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.site-footer {
+  background-color: #111;
+  color: #eee;
+  padding: 40px 20px;
+  font-family: sans-serif;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 220px;
+}
+
+.site-footer h3, .site-footer h4 {
+  color: #ff7f00;
+  margin-bottom: 10px;
+}
+
+.site-footer p, .site-footer li, .site-footer a {
+  color: #ccc;
+  font-size: 14px;
+  text-decoration: none;
+  line-height: 1.6;
+}
+
+.site-footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.site-footer ul li {
+  margin-bottom: 8px;
+}
+
+.socials a img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  filter: invert(80%);
+  transition: transform 0.3s ease;
+}
+
+.socials a:hover img {
+  transform: scale(1.2);
+  filter: invert(100%) sepia(100%) hue-rotate(10deg) saturate(300%);
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .socials {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+    .masked-text {
+        font-weight: bold;
+        font-size: 24px;
+        -webkit-text-fill-color: color;
+    }
+    .nx{
+        font-size: 12px;
+    }
+    .person{
+        display: flex;
+        width: 100%;
+        padding-top: 10px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        background-color: transparent;
+        border:None;
+    }
+}

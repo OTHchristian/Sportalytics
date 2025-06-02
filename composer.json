@@ -1,0 +1,17 @@
+{
+    "name": "dell/pronos-site",
+    "autoload": {
+        "psr-4": {
+            "Dell\\PronosSite\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "OTHchristian",
+            "email": "othchristian@icloud.com"
+        }
+    ],
+    "require": {
+        "altorouter/altorouter": "^2.0"
+    }
+}
