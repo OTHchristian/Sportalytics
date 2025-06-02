@@ -1,0 +1,3 @@
+[submodule "vendor/altorouter/altorouter"]
+  path = vendor/altorouter/altorouter
+  url = https://github.com/dannyvankooten/AltoRouter.git
