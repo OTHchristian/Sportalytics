@@ -8,13 +8,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="#">Accueil</a>
+                <a class="nav-link" href="/">Accueil</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Matchs à venir</a>
+                <a class="nav-link" href="/matchs">Matchs à venir</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Résultats</a>
+                <a class="nav-link" href="/resultats">Résultats</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Actualités</a>

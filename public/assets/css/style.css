@@ -154,7 +154,7 @@ tr:hover {
   transform: translateY(0);
 }
 
-.pronoItem:hover{
+.pronoItem:hover, .card:hover{
     border:1px solid orange;
     scale: 1.1;
     box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
@@ -278,6 +278,34 @@ tr:hover {
 .socials a:hover img {
   transform: scale(1.2);
   filter: invert(100%) sepia(100%) hue-rotate(10deg) saturate(300%);
+}
+.card{
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  border-radius: 10px;
+  background-color: white;
+  border:1px solid rgba(0,0,0,0.2);
+}
+.prono{
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  text-align: center;
+}
+.betButton{
+  width: 100%;
+  background-color: orange;
+  color: white;
+  border-radius: 10px;
+  padding: 20px;
+  border: none;
+  margin-top: 20px;
+}
+.betButton:focus{
+  outline: none;
 }
 
 @media (max-width: 768px) {

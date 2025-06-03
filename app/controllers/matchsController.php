@@ -1,8 +1,8 @@
 <?php
 
-function GetNextMatch(): array{
-
-    $url = 'https://www.sportytrader.com/';
+function MatchsController(){
+    $links = [];
+    $url = 'https://www.sportytrader.com/pronostics/';
 
     $ch = curl_init($url);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -15,7 +15,7 @@ function GetNextMatch(): array{
     libxml_clear_errors();
 
     $xpath = new DOMXPath($dom);
-    $elements = $xpath->query("//div[@class='px-box']");
+    $elements = $xpath->query("//section[@id='cal-section']");
 
     $text = $elements[0]->nodeValue;
 
@@ -24,13 +24,12 @@ function GetNextMatch(): array{
     $resultats = [];
     $titreActuel = null;
     $title = [];
-    $links = [];
 
     foreach ($lignes as $ligne) {
         $ligne = trim($ligne);
         if ($ligne === '') continue;
 
-        if (str_starts_with($ligne, "Pronostic")) {
+        if (str_starts_with($ligne, "Pronostic - ")) {
             $titreActuel = $ligne;
             $title[] = $titreActuel; 
             $resultats[$titreActuel] = [];
@@ -38,14 +37,12 @@ function GetNextMatch(): array{
             $resultats[$titreActuel][] = $ligne;
         }
     }
-    $imgs = $xpath->query("//div[contains(@class, 'px-box')]//img");
+
+    $imgs = $xpath->query("//div[contains(@class, 'card')]//img");
     foreach($imgs as $img){
         $links[] = $img->getAttribute('src');
     }
     $links = array_chunk($links, 2);
-    // var_dump($links);
-    // exit();
 
     return [$title, $links, $resultats];
-
 }

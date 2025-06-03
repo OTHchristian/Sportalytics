@@ -1,6 +1,6 @@
 <?php
     require '../app/controllers/homeController.php';
-    [$title, $resultats] = GetNextMatch();
+    [$title,$links, $resultats] = GetNextMatch();
 ;?>
 
 <!DOCTYPE html>
@@ -10,14 +10,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Welcome to my pronostics website</title>
+    <title>Welcome on Sportalytics</title>
 </head>
 <body>
     <?php require 'partials/navbar.php' ?>
     <div class="help" ></div>
     <div class="container">
         <div class="row">
-            <div class="col-xl-6">
+            <div class="col-xl-6 box hidden">
                 <div class="topCenter">
                     <div>
                         <h2 class = "masked-text">Découvrez chaque jour des pronostics fiables et argumentés sur le football,</h2>
@@ -57,7 +57,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xl-6">
+            <div class="col-xl-6 box hidden">
                 <div class="topCenter">
                     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">

@@ -7,6 +7,12 @@ $router = new AltoRouter();
 $router->map('GET', '/', function() {
     require '../app/views/home.php';
 });
+$router->map('GET', '/resultats', function() {
+    require '../app/views/resultats.php';
+});
+$router->map('GET', '/matchs', function() {
+    require '../app/views/matchs.php';
+});
 
 $match = $router->match();
 if ($match && is_callable($match['target'])) {
