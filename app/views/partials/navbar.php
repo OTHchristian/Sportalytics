@@ -17,7 +17,7 @@
                 <a class="nav-link" href="/resultats">Résultats</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Actualités</a>
+                <a class="nav-link" href="/actualites">Actualités</a>
             </li>
             </ul>
         </div>

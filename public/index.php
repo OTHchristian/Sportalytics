@@ -13,6 +13,9 @@ $router->map('GET', '/resultats', function() {
 $router->map('GET', '/matchs', function() {
     require '../app/views/matchs.php';
 });
+$router->map('GET', '/actualites', function() {
+    require '../app/views/actualites.php';
+});
 
 $match = $router->match();
 if ($match && is_callable($match['target'])) {

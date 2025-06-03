@@ -174,18 +174,18 @@ tr:hover {
     border: 1px solid rgba(0,0,0,0.2);
     overflow: hidden;
     border-radius: 20px;
+    margin-bottom: 20px;
 }
 .article:hover{
     border: 1px solid orange;
 }
 .article h5:hover{
-    color: orange;
+    color: #ff5500;
 }
 .pronoActu{
     padding: 30px;
 }
 .imgArticle{
-    background-image: url("https://static.sportytrader.com/images/news/tennis/jack_draper.webp");
     transform: scale(1.1);
     background-size: cover;
     height: 250px;

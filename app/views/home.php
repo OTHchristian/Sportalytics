@@ -1,6 +1,8 @@
 <?php
     require '../app/controllers/homeController.php';
+    require '../app/controllers/actualitesController.php';
     [$title,$links, $resultats] = GetNextMatch();
+     $actu = GetActualites();
 ;?>
 
 <!DOCTYPE html>
@@ -237,27 +239,35 @@
                 <div class="pronoActu">
                     <h3 class="styleTitle">Actualités Paris sportifs</h3>
                     <div class="row">
-                        <div class="col-xl-4 box hidden">
-                            <div class="article">
-                                <div style="background-color: rgba(0,0,0,0.3);with:100%;height:250px;">
-                                    <div class="imgArticle"></div>
-                                </div>
-                                <div class="smallDescrip">
-                                    <h5 style="font-weight: bold;">Roland Garros : un seul pari à éviter aujourd'hui</h5>
-                                    <div class="align">
-                                        
-                                        <svg class="opacity-75 mr-2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="12" height="12" viewBox="0 0 97.16 97.16" style="enable-background:new 0 0 97.16 97.16;margin-top:5px;" xml:space="preserve">
-                                            <path d="M48.58,0C21.793,0,0,21.793,0,48.58s21.793,48.58,48.58,48.58s48.58-21.793,48.58-48.58S75.367,0,48.58,0z M48.58,86.823    c-21.087,0-38.244-17.155-38.244-38.243S27.493,10.337,48.58,10.337S86.824,27.492,86.824,48.58S69.667,86.823,48.58,86.823z"></path>
-                                            <path d="M73.898,47.08H52.066V20.83c0-2.209-1.791-4-4-4c-2.209,0-4,1.791-4,4v30.25c0,2.209,1.791,4,4,4h25.832    c2.209,0,4-1.791,4-4S76.107,47.08,73.898,47.08z"></path>
-                                        </svg>
-                                        <p style="font-size: 14px; color: rgba(0,0,0,0.3)">2 juin 2025 à 11:03 par Quentin Despret</p>
+                        <?php for ($i=0; $i < 3 ; $i++) : ?>
+                            <div class="col-xl-4 box hidden">
+                                <div class="article">
+                                    <div style="background-color: rgba(0,0,0,0.3);with:100%;height:250px;">
+                                        <div class="imgArticle" style="background-image: url(<?= $actu[$i][0] ?>);"></div>
                                     </div>
-                                    <p>La fin des huitièmes de finale de Roland Garros, c'est aujourd'hui. 4 matchs au programme avec les 3 des 4 grands favoris du tournoi, et un dont il faudra grandement se m…</p>
-                                    <a href="#" style="color: orange">lire la suite</a>
+                                    <div class="smallDescrip">
+                                        <h5 style="font-weight: bold;"><?= $actu[$i][1] ?></h5>
+                                        <div class="align">
+                                            
+                                            <svg class="opacity-75 mr-2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="12" height="12" viewBox="0 0 97.16 97.16" style="enable-background:new 0 0 97.16 97.16;margin-top:5px;" xml:space="preserve">
+                                                <path d="M48.58,0C21.793,0,0,21.793,0,48.58s21.793,48.58,48.58,48.58s48.58-21.793,48.58-48.58S75.367,0,48.58,0z M48.58,86.823    c-21.087,0-38.244-17.155-38.244-38.243S27.493,10.337,48.58,10.337S86.824,27.492,86.824,48.58S69.667,86.823,48.58,86.823z"></path>
+                                                <path d="M73.898,47.08H52.066V20.83c0-2.209-1.791-4-4-4c-2.209,0-4,1.791-4,4v30.25c0,2.209,1.791,4,4,4h25.832    c2.209,0,4-1.791,4-4S76.107,47.08,73.898,47.08z"></path>
+                                            </svg>
+                                            <p style="font-size: 14px; color: rgba(0,0,0,0.3)"><?= $actu[$i][2] ?></p>
+                                        </div>
+                                        <p><?= $actu[$i][3] ?></p>
+                                        <a href="#" style="color: orange">lire la suite</a>
+                                    </div>
                                 </div>
+                            </div>
+                        <?php endfor ?>
+                        <div class="col-12">
+                            <div class="center">
+                                <button class="betButton" onclick="window.location.href='/actualites'" style="width: 60%">Voir tout</button>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
             <div class="col-xl-12">
