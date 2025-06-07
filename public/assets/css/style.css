@@ -12,6 +12,12 @@ nav{
     background-color: #e3f2fd;
     transition: 1s;
     z-index: 1;
+    overflow-x: hidden;
+}
+.navbar-collapse{
+    width: 600px;
+    background-color: #e3f2fd;
+    z-index: 1;
 }
 .nav-link:hover {
     color: black;
@@ -313,10 +319,78 @@ tr:hover {
 }
 .match, .field{
   padding: 10px;
-  border-radius: 10px;
   width: 100%;
   border: 1px solid rgba(0,0,0,0.2);
   margin-top: 20px;
+}
+.filter{
+  width: 100%;
+  border: 1px solid rgba(0,0,0,0.3);
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.filterComp{
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.filterDate{
+  width: 80%;
+  border: 1px solid rgba(0,0,0,0.3);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.mt{
+  padding-left: 15%;
+}
+.selectCompetitions{
+  padding: 10px;
+  width: 150px;
+  background-color: rgba(0,0,0,0.2);
+  border-radius: 10px;
+  border: none;
+}
+.selectCompetitions:focus{
+  border: none;
+  outline: none;
+}
+.activeFilter::after{
+  content: "";
+  width: auto;
+  border-radius: 2px;
+  display: block;
+  height: 3px;
+  background: orange;
+}
+.pub{
+  width: 100%;
+  background-color: #F6F6F9;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.insidePub{
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #031346;
+  align-items: center;
+  justify-content: space-around;
+}
+.bonus{
+  border: 1px solid white;
+  border-radius: 10px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  padding: 10px;
+  margin-left: 20px;
 }
 
 
@@ -327,6 +401,12 @@ tr:hover {
   }
   .socials {
     justify-content: center;
+  }
+  .filterDate{
+    width: 90%;
+  }
+  .mt{
+    padding-left: 5%;
   }
 }
 

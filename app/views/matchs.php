@@ -16,6 +16,30 @@
     <?php require 'partials/navbar.php' ?>
     <div class="help" ></div>
     <div class="container">
+        <div class="filter">
+            <div class="filterComp">
+                <p class="activeFilter">Tous</p>
+                <p>Football</p>
+                <p>Basket</p>
+                <p>Tenis</p>
+                <p>rugby</p>
+            </div>
+            <div style="border-top: 1px solid rgba(0,0,0,0.1);margin-bottom: 10px"></div>
+            <div class="mt">
+                <div class="filterDate">
+                    <p style="margin-top: 10px" class="activeFilter">Tous</p>
+                    <p style="margin-top: 10px">Aujourd'hui</p>
+                    <p style="margin-top: 10px">Demain</p>
+
+                </div>
+                <div style="width: 100%; margin-top: 20px;">
+                    <select name="competitions" id="" class="selectCompetitions">
+                        <option value="Competitions">Competitions</option>
+                    </select>
+                </div>
+            </div>
+            <br>
+        </div>
         <h3 class="styleTitle">Pronostics Sportifs</h3>
         <div class="filtre"></div>
         <?php foreach($title as $t): ?>
