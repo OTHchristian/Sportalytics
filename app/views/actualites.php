@@ -1,6 +1,7 @@
 <?php
     require '../app/controllers/actualitesController.php';
-    $resultats = GetActualites();
+    [$resultats, $details] = GetActualites();
+    $i = -1;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,6 +19,7 @@
         <h3 class="styleTitle">Actualité du pari sportif</h3>
         <div class="row">
             <?php foreach($resultats as $r):?>
+                <?php $i+=1; ?>
                 <div class="col-xl-4 box hidden">
                     <div class="article">
                         <div style="background-color: rgba(0,0,0,0.3);with:100%;height:250px;">
@@ -34,7 +36,7 @@
                                 <p style="font-size: 14px; color: rgba(0,0,0,0.3)"><?= $r[2] ?></p>
                             </div>
                             <p><?= $r[3] ?></p>
-                            <a href="#" style="color: orange">lire la suite</a>
+                            <a href="/actualite/details?q=<?= $details[$i] ?>" style="color: orange">lire la suite</a>
                         </div>
                     </div>
                 </div>

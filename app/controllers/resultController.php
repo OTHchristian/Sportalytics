@@ -96,8 +96,7 @@ function GetResultats(){
         }
     }
 
-    // echo "<pre>".var_dump($times)."</pre>";
-    // exit();
+
     return [$competitions, $teams , $times ,$resultats];
     
 

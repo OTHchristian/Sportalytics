@@ -59,7 +59,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xl-6 box hidden">
+            <div class="col-xl-6 box hidden ertec">
                 <div class="topCenter">
                     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
@@ -274,18 +274,7 @@
                 <section id="a-propos" class="about-section box hidden">
                 <div class="container">
                     <h2>À propos de <span class="highlight">Sportalytics</span></h2>
-                    <p>
-                    Sportalytics est bien plus qu’un simple site de pronostics sportifs : c’est une plateforme intelligente qui allie
-                    statistiques avancées, intuition humaine et algorithmes de prédiction pour vous aider à parier plus intelligemment.
-                    </p>
-                    <p>
-                    Que vous soyez passionné de football, de tennis ou de basketball, nous analysons en continu les performances,
-                    les dynamiques de forme et les données clés pour vous proposer des <strong>pronostics fiables, précis et documentés</strong>.
-                    </p>
-                    <p>
-                    Rejoignez une communauté de passionnés, accédez à nos analyses exclusives, et maximisez vos chances de réussite
-                    grâce à une approche basée sur la donnée et la stratégie.
-                    </p>
+                    <p>Sportalytics est bien plus qu’un simple site de pronostics sportifs : c’est une plateforme intelligente qui alliestatistiques avancées, intuition humaine et algorithmes de prédiction pour vous aider à parier plus intelligemment.Que vous soyez passionné de football, de tennis ou de basketball, nous analysons en continu les performances,les dynamiques de forme et les données clés pour vous proposer des <strong>pronostics fiables, précis et documentés</strong>.Rejoignez une communauté de passionnés, accédez à nos analyses exclusives, et maximisez vos chances de réussitegrâce à une approche basée sur la donnée et la stratégie.</p>
                 </div>
                 </section>
             </div>

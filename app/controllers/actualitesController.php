@@ -31,6 +31,17 @@ function GetActualites(): array{
         $descriptions[] = $data->nodeValue;
     }
 
+    $tmp = $xpath->query("//div[@class='bg-white overflow-hidden border border-gray-200 rounded-lg mb-4 lg:min-h-[500px] cursor-pointer hover:border-primary-yellow']");
+    foreach($tmp as $data){
+        $raw[] = $data->getAttribute('onclick');
+    }
+    foreach ($raw as $entry) {
+        if (preg_match("/window\.location\.href='https:\/\/www\.sportytrader\.com\/actualite\/(.*?)'/", $entry, $matches)) {
+            $details[] = $matches[1];
+        }
+    }
+
+
     $tmp = $xpath->query("//img[@class='w-full aspect-[16/9]']");
     foreach($tmp as $data){
         $links[] = $data->getAttribute('src');
@@ -42,5 +53,5 @@ function GetActualites(): array{
         ];
     }
 
-    return $resultats;
+    return [$resultats, $details];
 }
