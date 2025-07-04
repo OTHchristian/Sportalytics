@@ -1,7 +1,7 @@
 <?php
     require '../app/controllers/homeController.php';
     require '../app/controllers/actualitesController.php';
-    $actu = GetActualites();
+    [$actu, $details] = GetActualites();
     [$title, $resultats, $images] = GetNextMatch();
     $i=0;
     $j=1;
