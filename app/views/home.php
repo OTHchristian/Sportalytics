@@ -1,8 +1,10 @@
 <?php
     require '../app/controllers/homeController.php';
     require '../app/controllers/actualitesController.php';
-    [$title,$links, $resultats] = GetNextMatch();
-     $actu = GetActualites();
+    $actu = GetActualites();
+    [$title, $resultats, $images] = GetNextMatch();
+    $i=0;
+    $j=1;
 ;?>
 
 <!DOCTYPE html>
@@ -106,7 +108,7 @@
                     </div>
                     <div class="row">
                         <div class="col-sm-4 col-6">
-                            <div class="offerItem">
+                            <div class="offerItem" onclick="window.location.href='https://refpa3267686.top/L?tag=d_2935565m_1573c_&site=2935565&ad=1573'">
                                 <div>
                                     <div class="center">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="orange" class="bi bi-cash-coin" viewBox="0 0 16 16">
@@ -121,7 +123,7 @@
                             </div>
                         </div>
                         <div class="col-sm-4 col-6">
-                            <div class="offerItem">
+                            <div class="offerItem" onclick="window.location.href='https://refpa3267686.top/L?tag=d_2935565m_1573c_&site=2935565&ad=1573'">
                                 <div>
                                     <div class="center">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="orange" class="bi bi-gift" viewBox="0 0 16 16">
@@ -133,7 +135,7 @@
                             </div>
                         </div>
                         <div class="col-sm-4 col-6">
-                            <div class="offerItem">
+                            <div class="offerItem" onclick="window.location.href='https://refpa3267686.top/L?tag=d_2935565m_1573c_&site=2935565&ad=1573'">
                                 <div>
                                     <div class="center">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="orange" class="bi bi-stars" viewBox="0 0 16 16">
@@ -145,7 +147,7 @@
                             </div>
                         </div>
                         <div class="col-sm-4 col-6">
-                            <div class="offerItem">
+                            <div class="offerItem" onclick="window.location.href='https://refpa3267686.top/L?tag=d_2935565m_1573c_&site=2935565&ad=1573'">
                                 <div>
                                     <div class="center">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="orange" class="bi bi-cash-coin" viewBox="0 0 16 16">
@@ -160,7 +162,7 @@
                             </div>
                         </div>
                         <div class="col-sm-4 col-6">
-                            <div class="offerItem">
+                            <div class="offerItem" onclick="window.location.href='https://refpa3267686.top/L?tag=d_2935565m_1573c_&site=2935565&ad=1573'">
                                 <div>
                                     <div class="center">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="orange" class="bi bi-cash-coin" viewBox="0 0 16 16">
@@ -175,7 +177,7 @@
                             </div>
                         </div>
                         <div class="col-sm-4 col-6">
-                            <div class="offerItem">
+                            <div class="offerItem" onclick="window.location.href='https://refpa3267686.top/L?tag=d_2935565m_1573c_&site=2935565&ad=1573'">
                                 <div>
                                     <div class="center">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="orange" class="bi bi-cash-coin" viewBox="0 0 16 16">
@@ -203,13 +205,16 @@
                                     <?php $matches = array_chunk($resultats[$t], 3);?>
                                     <?php foreach($matches as $data): ?>
                                         <div class="col-xl-6">
-                                            <div class="pronoItem box hidden">
+                                            <div class="pronoItem box hidden" onclick="window.location.href='/matchs'">
                                                 <div class="row">
                                                     <div class="col-xl-12">
                                                         <p><?= $data[0] ?></p>
                                                     </div>
                                                     <div class="col-5">
                                                         <div class="person">
+                                                            <div style="margin-right:10px;display:flex;justify-content:center;">
+                                                                <img src="<?=$images[$i]?>" alt="" srcset="" style="margin-top:10px">
+                                                            </div>
                                                             <div style="text-align: center;">
                                                                 <span class="nx"><?= $data[1] ?></span>
                                                             </div>
@@ -220,6 +225,13 @@
                                                     </div>
                                                     <div class="col-5">
                                                         <div class="person">
+                                                            <div style="margin-right:10px;display:flex;justify-content:center;">
+                                                                <img src="<?=$images[$j]?>" alt="" srcset="" style="margin-top:10px">
+                                                                <?php
+                                                                    $i += 2;
+                                                                    $j +=2;
+                                                                ?>
+                                                            </div>
                                                             <div style="text-align: center;">
                                                                 <span class="nx"><?= $data[2] ?></span>
                                                             </div>

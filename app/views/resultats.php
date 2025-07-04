@@ -1,7 +1,8 @@
 <?php
     require '../app/controllers/resultController.php';
-    [$competitions, $teams, $times, $resultats] = GetResultats();
+    [$competitions, $teams, $times, $resultats,$scores] = GetResultats();
     $j = -1;
+    $k = -1;
 ?>
 
 <!DOCTYPE html>
@@ -76,8 +77,28 @@
                                         </div>
                                         <div class="col-4" style="display:flex;align-items:center;justify-content:end;">
                                             <div>
-                                                <p>1</p>
-                                                <p style="font-weight: bold;font-size: 17px">2</p>
+                                                <?php $k+=1; ?>
+                                                <?php
+                                                    $tmp_score = $str = preg_replace('/\s+/', ' ', trim($scores[$k]));
+                                                    $score = explode(" ",$tmp_score);
+                                                ?>
+                                                <?php if(count($score) != 1): ?>
+                                                    <?php if(count($score) == 2): ?>
+                                                        <p><?=$score[0]?></p>
+                                                        <p style="font-weight: bold;font-size: 17px"><?=$score[1]?></p>
+                                                    <?php else: ?>
+                                                        <p>
+                                                            <?php for ($i=0; $i < count($score)/2 -1 ; $i++):?>
+                                                                <span><?= $score[$i] ?> </span>
+                                                            <?php endfor ?>
+                                                        </p>
+                                                        <p>
+                                                            <?php for ($i=count($score)/2 -1; $i < count($score)-1; $i++):?>
+                                                                <span><?= $score[$i] ?> </span>
+                                                            <?php endfor ?>
+                                                        </p>
+                                                    <?php endif ?>
+                                                <?php endif ?>
                                             </div>
                                         </div>
                                     </div>

@@ -45,6 +45,5 @@ function GetActuDetails($link){
         $text[] = $data->nodeValue;
     }
 
-    // var_dump($subtitles);
-    // exit();
+    return [$title,$source,$image,$resume,$subtitles,$text];
 }

@@ -3,6 +3,7 @@
 function GetNextMatch(): array{
 
     $url = 'https://www.sportytrader.com/';
+    $i = 0;
 
     $ch = curl_init($url);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -16,6 +17,12 @@ function GetNextMatch(): array{
 
     $xpath = new DOMXPath($dom);
     $elements = $xpath->query("//div[@class='px-box']");
+
+    $tmp = $xpath->query("//img[@class='bg-white p-1 border border-gray-300 rounded-full h-10 w-10 mr-1.5']");
+    foreach ($tmp as $data) {
+        $images[] = $data->getAttribute('src');
+    }
+
 
     $text = $elements[0]->nodeValue;
 
@@ -38,14 +45,7 @@ function GetNextMatch(): array{
             $resultats[$titreActuel][] = $ligne;
         }
     }
-    $imgs = $xpath->query("//div[contains(@class, 'px-box')]//img");
-    foreach($imgs as $img){
-        $links[] = $img->getAttribute('src');
-    }
-    $links = array_chunk($links, 2);
-    // var_dump($links);
-    // exit();
 
-    return [$title, $links, $resultats];
+    return [$title, $resultats, $images];
 
 }

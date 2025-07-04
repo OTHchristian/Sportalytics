@@ -95,9 +95,10 @@ function GetResultats(){
             $times[$competitions[$k-1]][] =  $state;
         }
     }
+    // var_dump($scores);
+    // exit();
 
-
-    return [$competitions, $teams , $times ,$resultats];
+    return [$competitions, $teams , $times ,$resultats, $scores];
     
 
 }

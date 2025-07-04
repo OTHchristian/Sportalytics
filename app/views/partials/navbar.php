@@ -24,7 +24,7 @@
     </div>
 </nav>
 
-<script>
+<!-- <script>
 let lastScrollTop = 0;
 const navbar = document.getElementById('navbar');
 
@@ -39,4 +39,4 @@ window.addEventListener('scroll', function() {
 
   lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
 });
-</script>
+</script> -->

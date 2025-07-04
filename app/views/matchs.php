@@ -1,7 +1,8 @@
 <?php
     require '../app/controllers/matchsController.php';
-    [$title, $links, $resultats] = MatchsController();
+    [$title, $links, $resultats, $details] = MatchsController();
     $i = 0;
+    $j = -1;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -48,9 +49,11 @@
                 <div class="row">
                    <?php $matches = array_chunk($resultats[$t], 13);?>
                     <?php foreach($matches as $data): ?>
+                        <?php $j+=1 ?>
                         <?php if($data[0] != "18+ | Annonce publicitaire | Jouer comporte des risques") : ?>
                             <div class="col-xl-4">
                                 <div class="card box hidden">
+                                    <!-- onclick="window.location.href = '/match/details?q=<?= $details[$j] ?>'" -->
                                     <div>
                                         <p style="text-align: center;font-weight: bold;"><?= $data[0] ?></p>
                                     </div>
@@ -73,7 +76,7 @@
                                         <p style="font-weight: bold;color:#ff5500;"><?= $data[6] ?></p>
                                         <p><?= $data[7] ?></p>
                                     </div>
-                                    <button class="betButton">Pariez maintenant</button>
+                                    <button class="betButton" onclick="window.location.href='https://refpa3267686.top/L?tag=d_2935565m_1573c_&site=2935565&ad=1573'">Pariez maintenant</button>
                                 </div>
                             </div>
                         <?php endif ?>

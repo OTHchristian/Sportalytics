@@ -44,5 +44,16 @@ function MatchsController(){
     }
     $links = array_chunk($links, 2);
 
-    return [$title, $links, $resultats];
+    $tmp = $xpath->query("//div[@class='card h-full border border-gray-200 border-2  transition-all cursor-pointer hover:shadow-xl  rounded-lg relative']");
+    foreach($tmp as $data){
+        $raw[] = $data->getAttribute('onclick');
+    }
+    foreach ($raw as $entry) {
+        if (preg_match("/window\.open\('\/pronostics\/([^']+)'/", $entry, $matches)) {
+            $details[] = $matches[1];
+        }
+    }
+
+
+    return [$title, $links, $resultats, $details];
 }
